@@ -61,7 +61,12 @@ const Player = ({
         <Flex w="100%" color="#fff" fontSize={"2rem"} flexDirection={"column"}>
           Select a song to play
           {isMobile && (
-            <Button mt={4} onClick={() => setIsModalOpen(true)}>
+            <Button
+              mt={4}
+              variant={"outline"}
+              color="#fff"
+              onClick={() => setIsModalOpen(true)}
+            >
               Select Song
             </Button>
           )}

@@ -23,9 +23,8 @@ import { GET_ALL_SONGS } from "./queries";
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  const [backgroundcol, setBackgroundcol] = useState("#0B0819");
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
     if (window.innerWidth <= 768) {
@@ -84,7 +83,6 @@ function App() {
     }
   };
 
-  console.log(songs);
   useEffect(() => {
     if (!loading) {
       setSongs(data.getSongs);
